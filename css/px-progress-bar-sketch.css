@@ -561,9 +561,7 @@ a {
   min-height: 100vh; }
 
 .px-progress-bar {
-  height: 20px;
-  width: 200px;
-  position: relative; }
+  height: 20px; }
 
 .background {
   background-color: #e4e4ea; }
@@ -582,17 +580,18 @@ a {
 
 .striped {
   background-image: linear-gradient(-45deg, #0986a4 25%, transparent 25%, transparent 50%, #0986a4 50%, #0986a4 75%, transparent 75%, transparent);
-  /*background-image: linear-gradient(
-    -45deg,
-    $select-blue-default,
-    $select-blue-default 33%,
-    $select-blue-hover 33%,
-    $select-blue-hover 66%,
-    $select-blue-default 66%,
-    $select-blue-default 100%);*/
   background-size: 60px 60px;
   background-repeat: repeat-x;
   background-position: top left; }
+
+@keyframes progress-animation {
+  from {
+    background-position: 0px; }
+  to {
+    background-position: -120px; } }
+
+.animated {
+  animation: progress-animation 2s linear infinite; }
 
 /*------------------------------------*    #CLEARFIX
 \*------------------------------------*/

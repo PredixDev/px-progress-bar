@@ -38,8 +38,6 @@ Predix branding rules go in px-progress-bar-predix.scss, not in this file.
 // Component
 .px-progress-bar {
   height: 20px;
-  width: 200px;
-  position: relative;
 }
 .background {
   background-color: $grey3;
@@ -70,17 +68,16 @@ Predix branding rules go in px-progress-bar-predix.scss, not in this file.
   $select-blue-hover 75%,
   transparent 75%,
   transparent);
-  /*background-image: linear-gradient(
-    -45deg,
-    $select-blue-default,
-    $select-blue-default 33%,
-    $select-blue-hover 33%,
-    $select-blue-hover 66%,
-    $select-blue-default 66%,
-    $select-blue-default 100%);*/
   background-size: 60px 60px;
   background-repeat: repeat-x;
   background-position: top left;
+}
+@keyframes progress-animation {
+  from {background-position: 0px;}
+  to {background-position: -120px;}
+}
+.animated {
+  animation: progress-animation 2s linear infinite;
 }
 
 

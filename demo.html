@@ -21,19 +21,34 @@
     </script>
     <style>
       #input {width: 50px}
+      #container {width: 400px}
     </style>
 
   </head>
 
   <body>
 
-    <h3>Demo</h3>
+    <h3>Progress Bar Demos</h3>
+    <div id="container">
 
-    <px-progress-bar id="progress" value="0" striped></px-progress-bar>
-    Enter percent: <input id="input" type="Number" onkeyup="updateValue()" onmouseup="updateValue()"></input>
+    <p>A simple progress bar with no stripes or animation.</p>
+    <px-progress-bar value="25"></px-progress-bar>
     <br/>
-    <button id="toggle" onclick="document.getElementById('progress').toggleAttribute('striped');">Toggle Striping</button>
 
+    <p>A progress bar with candystriping.</p>
+    <px-progress-bar value="75" striped></px-progress-bar>
+    <br/>
+
+    <p>A progress bar with candystriping and animation, for indeterminate loading situations.</p>
+    <px-progress-bar value="100" striped animated></px-progress-bar>
+    <br/>
+
+    <p>The progress bar animates as it fills - enter a value in the text box or use the arrow keys to change the value.</p>
+    <px-progress-bar id="progress" value="0" striped></px-progress-bar>
+    Percent: <input id="input" type="Number" value="0" onkeyup="updateValue()" onmouseup="updateValue()"></input>
+    <br/>
+
+    </div>
   </body>
 
 </html>
