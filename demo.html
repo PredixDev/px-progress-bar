@@ -19,7 +19,12 @@
       progress.setAttribute('value', input.value);
     }
     </script>
-    <style>
+    <style is="custom-style">
+      #custom {
+        --px-progress-bar-fill-color: #060;
+        --px-progress-bar-stripe-color: #030;
+        --px-progress-bar-height: 10px;
+      }
       #input {width: 50px}
       #container {width: 400px}
     </style>
@@ -46,6 +51,10 @@
     <p>The progress bar animates as it fills - enter a value in the text box or use the arrow keys to change the value.</p>
     <px-progress-bar id="progress" value="0" striped></px-progress-bar>
     Percent: <input id="input" type="Number" value="0" onkeyup="updateValue()" onmouseup="updateValue()"></input>
+    <br/>
+
+    <p>A progress bar with custom styling.</p>
+    <px-progress-bar id="custom" value="75" striped></px-progress-bar>
     <br/>
 
     </div>

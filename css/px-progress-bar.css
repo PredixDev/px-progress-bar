@@ -574,7 +574,7 @@ a {
   min-height: 100vh; }
 
 .px-progress-bar {
-  height: 20px; }
+  height: var(--px-progress-bar-height, 20px); }
 
 .background {
   background-color: #e4e4ea; }
@@ -586,13 +586,13 @@ a {
   overflow: hidden; }
 
 .filleffect {
-  background-color: #0a9ec1;
+  background-color: var(--px-progress-bar-fill-color, #0a9ec1);
   transition: transform 0.2s;
   transform-origin: left center;
   transform: scaleX(0); }
 
 .striped {
-  background-image: linear-gradient(-45deg, #0986a4 25%, transparent 25%, transparent 50%, #0986a4 50%, #0986a4 75%, transparent 75%, transparent);
+  background-image: linear-gradient(-45deg, var(--px-progress-bar-stripe-color, #0986a4) 25%, transparent 25%, transparent 50%, var(--px-progress-bar-stripe-color, #0986a4) 50%, var(--px-progress-bar-stripe-color, #0986a4) 75%, transparent 75%, transparent);
   background-size: 60px 60px;
   background-repeat: repeat-x;
   background-position: top left; }

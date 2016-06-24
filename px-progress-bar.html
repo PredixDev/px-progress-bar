@@ -13,10 +13,20 @@ Element providing a progress bar, which can optionally include stripes and an an
 
     <px-progress-bar percent="50"></px-progress-bar>
 
+### Styling
+The following custom properties and mixins are also available for styling:
+
+Custom property | Description | Default
+----------------|-------------|----------
+`--px-progress-bar-height` | Height of the progress bar element | `20px`
+`--px-progress-bar-fill-color` | Color of the filled portion of the bar | `$select-blue-default`
+`--px-progress-bar-stripe-color` | Color of the stripes | `$select-blue-hover`
+
 @element px-progress-bar
 @blurb Element providing a progress bar.
 @homepage index.html
 @demo demo.html
+
 -->
 <dom-module id="px-progress-bar">
   <link rel="import" type="css" href="css/px-progress-bar.css"/>

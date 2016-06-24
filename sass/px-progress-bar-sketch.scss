@@ -36,8 +36,10 @@ Predix branding rules go in px-progress-bar-predix.scss, not in this file.
 
 
 // Component
+@import "variables";
+
 .px-progress-bar {
-  height: 20px;
+  height: $px-progress-bar-height;
 }
 .background {
   background-color: $grey3;
@@ -51,7 +53,7 @@ Predix branding rules go in px-progress-bar-predix.scss, not in this file.
   overflow: hidden;
 }
 .filleffect {
-  background-color: $select-blue-default;
+  background-color: $px-progress-bar-fill-color;
   transition: transform 0.2s;
   -webkit-transform-origin: left center;
   transform-origin: left center;
@@ -61,11 +63,11 @@ Predix branding rules go in px-progress-bar-predix.scss, not in this file.
 .striped {
   background-image: linear-gradient(
   -45deg,
-  $select-blue-hover 25%,
+  $px-progress-bar-stripe-color 25%,
   transparent 25%,
   transparent 50%,
-  $select-blue-hover 50%,
-  $select-blue-hover 75%,
+  $px-progress-bar-stripe-color 50%,
+  $px-progress-bar-stripe-color 75%,
   transparent 75%,
   transparent);
   background-size: 60px 60px;
