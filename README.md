@@ -31,7 +31,7 @@ Second, import the component to your application with the following tag in your 
 Finally, use the component in your application:
 
 ```
-<px-progress-bar percent="50"></px-progress-bar>
+<px-progress-bar value="50"></px-progress-bar>
 ```
 
 <br />
@@ -39,7 +39,7 @@ Finally, use the component in your application:
 
 ## documentation
 
-Read the full API and view the demo [here](https://predixdev.github.io/Px-Progress-Bar).
+Read the full API and view the demo [here](https://predixdev.github.io/px-progress-bar/px-progress-bar/index.html).
 
 The documentation in this repository is supplemental to the official Predix documentation, which is continuously updated and maintained by the Predix documentation team. Go to [http://predix.io](http://predix.io)  to see the official Predix documentation.
 
