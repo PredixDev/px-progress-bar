@@ -1,0 +1,27 @@
+sudo: required
+dist: trusty
+language: node_js
+node_js:
+- stable
+branches:
+  except:
+  - gh-pages
+addons:
+  firefox: latest
+  apt:
+    sources:
+    - google-chrome
+    packages:
+    - google-chrome-stable
+before_script:
+- npm install web-component-tester
+- npm install bower
+- export PATH=$PWD/node_modules/.bin:$PATH
+- bower install
+script:
+- xvfb-run wct --skip-plugin sauce
+- if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then wct --plugin sauce --skip-plugin
+  local; fi
+env:
+  global:
+    secure: ABBLU9r6j7OOQaXIRgBNWOlXdAUyDaTJ5XKBHm2HJ1VHDookdG//YSK2sdhj7d+2xjcETENguVOxP59wSykEDhmF66qRzPSjITBo2nSyHagJ8E7C/Pzhgqm7friCOqW18D4aX4EtOLP3aVHBMt0mtYZgL1wP261bzvlXoynqR7pG62znHqClI8g84sPv+BJTqo95qHoMJhEV5gcdB+JcU34KnWHiqDvYCOqKu8Jjumw2llCjmb77PQc74XgfeDgh6nvl/ebyfJUDME9Sz26MoVW1ehl3LuIkKVXfXJVo4v1AVSMvtKAuu40T1cL3I1ioW9zAH56YGtkbtxK8Hy8DwI0zV+12a5felRgmvAn044PeUqZ6/41qjy3EJPBZHatllIMPCnFKj3RQQYYL6af9Jmf2fOLpU3mM56C6FlEuGdd3mS8bkR4/vTAYErl/0ywSRgC4A2x+Zs9fLw1u2nabNazruyc55nLscC22TAwJ5U9JNR0tWZufu3bYE1vR5TreW80PmFPu0MomqYCvSm15uhJS46j0FtFJZ221zFewcJnzzoGTdE6yJ23zSI7dJ5pruzn1nE1ZSQpbBZVgVdtP32aBvoKVNlLzB2cH5n08nErDA5CmSMly6+/QRgSohhif8OBO6E+UlGEJX3BfvvMVK/BnG5hmRSjHk9Idi8A6nMs=
