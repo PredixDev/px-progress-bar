@@ -24,7 +24,8 @@ module.exports = function(grunt) {
       dist: {
         files: {
           'css/noprefix/px-progress-bar-sketch.css': 'sass/px-progress-bar-sketch.scss',
-          'css/noprefix/px-progress-bar.css': 'sass/px-progress-bar-predix.scss'
+          'css/noprefix/px-progress-bar.css': 'sass/px-progress-bar-predix.scss',
+          'css/noprefix/px-progress-bar-demo.css': 'sass/px-progress-bar-demo.scss'
         }
       }
     },
