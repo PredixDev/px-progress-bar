@@ -11,7 +11,8 @@
     "sass",
     "bower_components",
     "node_modules",
-    "test"
+    "test",
+    "OSS_Notice.pdf"
   ],
   "dependencies": {
     "polymer": "^1.5.0",
@@ -29,7 +30,6 @@
     "px-api-viewer": "https://github.com/PredixDev/px-api-viewer.git",
     "px-demo-snippet": "https://github.com/predixdev/px-demo-snippet.git",
     "px-toggle-design": "^0.2.12",
-    "px-headings-design": "^0.2.13",
     "px-actionable-text-icons-design": "^0.0.3",
     "px-code-design": "^0.2.11",
     "px-headings-design": "^0.2.14",
