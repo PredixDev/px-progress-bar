@@ -1,6 +1,6 @@
 {
   "name": "px-progress-bar",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": [
     "px-progress-bar.html"
   ],
@@ -27,12 +27,13 @@
     "px-tabs": "~0.4.0",
     "ace-widget": "LostInBrittany/ace-widget#~1.0.13",
     "px-api-viewer": "https://github.com/PredixDev/px-api-viewer.git",
-    "px-clipboard": "^0.0.1",
     "px-demo-snippet": "https://github.com/predixdev/px-demo-snippet.git",
     "px-toggle-design": "^0.2.12",
     "px-headings-design": "^0.2.13",
     "px-actionable-text-icons-design": "^0.0.3",
-    "px-code-design": "^0.2.11"
+    "px-code-design": "^0.2.11",
+    "px-headings-design": "^0.2.14",
+    "px-list-inline-design": "^0.2.11"
   },
   "resolutions": {
     "polymer": "^v1.5.0"
