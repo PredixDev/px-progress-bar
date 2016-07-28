@@ -1,3 +1,7 @@
+v0.0.4
+==================
+* added image to readme, removed watch, added view on github
+
 v0.0.3
 ==================
 * updated value input to type number
