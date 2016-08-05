@@ -1,3 +1,7 @@
+v0.0.6
+==================
+* added overflow to demo class and removed <br>
+
 v0.0.5
 ==================
 * updated mega demo styles and bower px-demo-snippet to ^
