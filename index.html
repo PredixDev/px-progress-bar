@@ -29,10 +29,17 @@
     <div class="hero u-p++ text--shadow">
       <a class="actionable flex flex--right flex--middle" href="https://github.com/PredixDev/px-progress-bar" target="_blank"><iron-icon class="menu__open" icon="fa:fa-github"></iron-icon>View on Github</a>
   		<h1 class="delta">px-progress-bar</h1>
-  		<p>
-  			The	<code>px-progress-bar</code> component provides a progress bar, which can optionally include stripes and an animation effect.
-  		</p>
-
+      <div class="description-text">
+    		<p>
+          The Basic Progress Bar indicates the progress of an activity with explicit start and end times, or known duration.
+          The blue portion of the bar grows from left to right to indicate the percentage of progress. Upon completion,
+          the progress bar should automatically disappear from the screen.
+    		</p>
+        <p>
+          The Striped Progress Bar indicates an ongoing activity with an indefinite end, such as loading data. The animation hints at
+          forward progress, but since an end time cannot be calculated, does not explicitly display the amount of progress.
+        </p>
+      </div>
   		<div class="flex">
   			<img class="u-mr--" src="https://img.shields.io/travis/PredixDev/px-progress-bar.svg?style=flat-square" alt="Travis"/>
   			<img class="u-mr--" src="https://img.shields.io/bower/v/px-progress-bar.svg?style=flat-square" alt="Bower"/>
@@ -46,50 +53,50 @@
       <div class="tabContainer u-pt++ u-pl++">
         <px-tab-set selected="{{selected}}" bare no-bottom-border>
           <template is="dom-repeat" items="{{optionsArray}}">
-            <px-tab>Configuration {{indexPlusOne(index)}}</px-tab>
+            <px-tab>Option {{indexPlusOne(index)}}</px-tab>
           </template>
         </px-tab-set>
       </div>
       <px-tab-pages selected="{{selected}}">
         <template is="dom-repeat" items="{{optionsArray}}">
-          <section class="tab-page flex flex--right flex--wrap">
-            <div class="mega-demo flex u-pb++">
-            <!-- Properties -->
-            <div class="properties u-ph+ u-pb+ u-mt++ u-mh++">
-              <p class="epsilon">Properties</p>
-              <div class="u-mb-">Value: <input id="value{{indexPlusOne(index)}}" class="text-input" type="number" placeholder="0" value="{{item.value::input}}" /></div>
-              <div class="flex u-mb-">
-                <input id="striped{{indexPlusOne(index)}}" class="toggle__input toggle__input--small" type="checkbox" checked="{{item.striped::change}}">
-                <label for$="striped{{indexPlusOne(index)}}" class="toggle__label toggle__label--small"></label>
-                <div class="u-ml-">striped</div>
+          <section class="tab-page">
+            <div class="mega-demo flex flex--wrap u-ph++ u-pb++">
+              <!-- Properties -->
+              <div class="properties u-ph+ u-pb+ u-mt+">
+                <p class="epsilon">Properties</p>
+                <div class="u-mb-">Value: <input id="value{{indexPlusOne(index)}}" class="text-input" type="number" placeholder="0" value="{{item.value::input}}" /></div>
+                <div class="flex u-mb-">
+                  <input id="striped{{indexPlusOne(index)}}" class="toggle__input toggle__input--small" type="checkbox" checked="{{item.striped::change}}">
+                  <label for$="striped{{indexPlusOne(index)}}" class="toggle__label toggle__label--small"></label>
+                  <div class="u-ml-">striped</div>
+                </div>
+                <div class="flex u-mb-">
+                  <input id="animated{{indexPlusOne(index)}}" class="toggle__input toggle__input--small" type="checkbox" checked="{{item.animated::change}}">
+                  <label for$="animated{{indexPlusOne(index)}}" class="toggle__label toggle__label--small"></label>
+                  <div class="u-ml-">animated</div>
+                </div>
               </div>
-              <div class="flex u-mb-">
-                <input id="animated{{indexPlusOne(index)}}" class="toggle__input toggle__input--small" type="checkbox" checked="{{item.animated::change}}">
-                <label for$="animated{{indexPlusOne(index)}}" class="toggle__label toggle__label--small"></label>
-                <div class="u-ml-">animated</div>
-              </div>
-            </div>
 
-            <div class="demoContainer u-mr++">
-              <!-- demo -->
-              <div class="flex flex--col">
-                <div class="flex__item demo u-ph+ u-pb+ u-mt++">
-                  <br />
-                  <px-progress-bar
-                    id="progress"
-                    value="{{item.value}}"
-                    striped="{{item.striped}}"
-                    animated="{{item.animated}}">
-                  </px-progress-bar>
-                </div>
-                <div class="flex__item">
-                  <px-demo-snippet
-                    element-properties={{item}}
-                    element-name="px-progress-bar">
-                  </px-demo-snippet>
+              <div class="demoContainer u-mt+">
+                <!-- demo -->
+                <div class="flex flex--col">
+                  <div class="flex__item demo u-ph+ u-pb+">
+                    <br />
+                    <px-progress-bar
+                      id="progress"
+                      value="{{item.value}}"
+                      striped="{{item.striped}}"
+                      animated="{{item.animated}}">
+                    </px-progress-bar>
+                  </div>
+                  <div class="flex__item">
+                    <px-demo-snippet
+                      element-properties={{item}}
+                      element-name="px-progress-bar">
+                    </px-demo-snippet>
+                  </div>
                 </div>
               </div>
-            </div>
           </div>
           <div class="apiContainer">
             <div class="flex flex--col api u-mt++" >
