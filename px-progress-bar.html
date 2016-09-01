@@ -28,9 +28,14 @@ Custom property | Description | Default
 @demo demo.html
 
 -->
+
+<link rel="import" href="css/px-progress-bar-styles.html">
+
 <dom-module id="px-progress-bar">
-  <link rel="import" type="css" href="css/px-progress-bar.css"/>
   <template>
+    <style include="px-progress-bar-styles"></style>
+    <style include="px-theme-styles"></style>
+
     <div id="background" class="background">
       <div id="fill" class="fill">
         <div id="filleffect" class="filleffect"></div>
