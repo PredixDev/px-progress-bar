@@ -1,3 +1,7 @@
+v0.1.2
+==================
+* fixed demo page for IE
+
 v0.0.8
 ==================
 * added codepen
