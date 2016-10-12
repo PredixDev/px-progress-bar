@@ -1,6 +1,18 @@
 v0.1.2
 ==================
+* Move to latest gulpfile and demo snippet component.
+
+v0.1.2
+==================
 * fixed demo page for IE
+
+v0.1.1
+==================
+* Cleanup, remove gruntfile
+
+v0.1.0
+==================
+* Grunt to gulp & style modules
 
 v0.0.8
 ==================

@@ -2,7 +2,7 @@
   "name": "px-progress-bar",
   "author": "General Electric",
   "description": "A Px progress bar component",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "private": true,
   "extName": null,
   "repository": {
