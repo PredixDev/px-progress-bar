@@ -1,3 +1,7 @@
+v0.1.5
+==================
+* added style variable for background color
+
 v0.1.4
 ==================
 * Updated dependencies
