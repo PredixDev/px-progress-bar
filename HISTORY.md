@@ -1,3 +1,7 @@
+v0.1.6
+==================
+* rebuild css
+
 v0.1.5
 ==================
 * added style variable for background color
