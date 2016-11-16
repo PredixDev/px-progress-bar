@@ -1,3 +1,8 @@
+
+v0.1.11
+==================
+* changing Gruntfile.js to gulpfile.js
+
 v0.1.10
 ==================
 * separated predix and sketch styles

@@ -1,13 +1,13 @@
 {
     "name": "px-progress-bar",
-    "version": "0.1.10",
+    "version": "0.1.11",
     "main": [
         "px-progress-bar.html"
     ],
     "ignore": [
         ".*",
         "npm-debug.log",
-        "Gruntfile.js",
+        "gulpfile.js",
         "sass",
         "bower_components",
         "node_modules",
