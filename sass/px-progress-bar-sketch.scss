@@ -31,20 +31,10 @@ Predix branding rules go in px-progress-bar-predix.scss, not in this file.
 @import "px-viewport-design/_base.viewport.scss";
 
 
-$px-progress-bar-height           :   var(--px-progress-bar-height,20px);
-$px-progress-bar-fill-color       :   var(--px-progress-bar-fill-color,$select-blue-default);
-$px-progress-bar-stripe-color     :   var(--px-progress-bar-stripe-color,$select-blue-hover);
-$px-progress-bar-background-color :   var(--px-progress-bar-background-color, $grey3);
-
-
-
 // Component
 
 .px-progress-bar {
-  height: $px-progress-bar-height;
-}
-.background {
-  background-color: $px-progress-bar-background-color;
+  height: var(--px-progress-bar-height, 20px);
 }
 .fill {
   transition: transform 0.2s;
@@ -55,7 +45,6 @@ $px-progress-bar-background-color :   var(--px-progress-bar-background-color, $g
   overflow: hidden;
 }
 .filleffect {
-  background-color: $px-progress-bar-fill-color;
   transition: transform 0.2s;
   -webkit-transform-origin: left center;
   transform-origin: left center;
@@ -63,15 +52,6 @@ $px-progress-bar-background-color :   var(--px-progress-bar-background-color, $g
   transform: scaleX(0);
 }
 .striped {
-  background-image: linear-gradient(
-  -45deg,
-  $px-progress-bar-stripe-color 25%,
-  transparent 25%,
-  transparent 50%,
-  $px-progress-bar-stripe-color 50%,
-  $px-progress-bar-stripe-color 75%,
-  transparent 75%,
-  transparent);
   background-size: 60px 60px;
   background-repeat: repeat-x;
   background-position: top left;

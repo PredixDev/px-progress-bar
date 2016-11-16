@@ -23,3 +23,27 @@ common/abstract rules go in px-progress-bar-sketch.scss, not in this file.
 @import "px-colors-design/_settings.colors.scss";
 
 @import 'px-progress-bar-sketch.scss';
+
+// Component
+
+$px-progress-bar-fill-color       :   var(--px-progress-bar-fill-color,$select-blue-default);
+$px-progress-bar-stripe-color     :   var(--px-progress-bar-stripe-color,$select-blue-hover);
+$px-progress-bar-background-color :   var(--px-progress-bar-background-color, $grey3);
+
+.background {
+  background-color: $px-progress-bar-background-color;
+}
+.filleffect {
+  background-color: $px-progress-bar-fill-color;
+}
+.striped {
+  background-image: linear-gradient(
+  -45deg,
+  $px-progress-bar-stripe-color 25%,
+  transparent 25%,
+  transparent 50%,
+  $px-progress-bar-stripe-color 50%,
+  $px-progress-bar-stripe-color 75%,
+  transparent 75%,
+  transparent);
+}

@@ -1,6 +1,6 @@
 {
     "name": "px-progress-bar",
-    "version": "0.1.9",
+    "version": "0.1.10",
     "main": [
         "px-progress-bar.html"
     ],
