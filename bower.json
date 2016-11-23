@@ -1,6 +1,6 @@
 {
     "name": "px-progress-bar",
-    "version": "0.1.13",
+    "version": "0.1.14",
     "main": [
         "px-progress-bar.html"
     ],
@@ -33,6 +33,6 @@
         "px-code-design": "^0.2.11",
         "px-headings-design": "^0.2.14",
         "px-list-inline-design": "^0.2.11",
-        "px-slider": "^0.6.0"
+        "px-slider": "^0.7.5"
     }
 }
