@@ -35,7 +35,7 @@ Custom property | Description | Default
 <dom-module id="px-progress-bar">
   <template>
     <style include="px-progress-bar-styles"></style>
-    
+
 
     <div id="background" class="background">
       <div id="fill" class="fill">
@@ -114,6 +114,7 @@ Custom property | Description | Default
       this.$.fill.style.transform = this.$.fill.style.webkitTransform = transform;
       transform = 'scaleX(' + 1 / this._ratio + ')';
       this.$.filleffect.style.transform = this.$.filleffect.style.webkitTransform = transform;
+      this.setAttribute('aria-valuenow',this.value);
     },
     /**
     * Function to compute the ratio based on the value.
@@ -130,6 +131,11 @@ Custom property | Description | Default
     ready: function() {
       this.toggleClass('striped',this.striped,this.$.filleffect);
       this.toggleClass('animated',this.animated,this.$.filleffect);
+    },
+    attached: function() {
+      this.setAttribute('role','progressbar');
+      this.setAttribute('aria-valuemin','0');
+      this.setAttribute('aria-valuemax','100');
     }
 
 

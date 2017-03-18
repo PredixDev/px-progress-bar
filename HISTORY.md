@@ -1,3 +1,7 @@
+v0.2.5
+==================
+* accessibility improvements
+
 v0.2.4
 ==================
 * fixed demo (#2)
