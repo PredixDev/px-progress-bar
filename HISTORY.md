@@ -1,3 +1,8 @@
+v1.0.0
+==================
+* bump dependencies for redesign
+* component redesign
+
 v0.2.5
 ==================
 * accessibility improvements

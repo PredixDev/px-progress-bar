@@ -42,8 +42,7 @@
       <px-demo-component style="width:100%;">
         <px-progress-bar
           value="{{props.value.value}}"
-          striped="{{props.striped.value}}"
-          animated="{{props.animated.value}}">
+          infinite="{{props.infinite.value}}">
         </px-progress-bar>
       </px-demo-component>
       <!-- END Component ------------------------------------------------------>
@@ -84,10 +83,9 @@
             },
 
             {
-              configName: "Animated",
+              configName: "Infinite",
               "value":100,
-              "striped":true,
-              "animated":true
+              "infinite":true
             }
           ]
         }
@@ -104,13 +102,7 @@
         inputType: 'number'
       },
 
-      striped: {
-        type: Boolean,
-        defaultValue: false,
-        inputType: 'toggle'
-      },
-
-      animated: {
+      infinite: {
         type: Boolean,
         defaultValue: false,
         inputType: 'toggle'
