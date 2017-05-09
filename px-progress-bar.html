@@ -48,7 +48,6 @@ Custom property | Description | Default
 
     is: 'px-progress-bar',
 
-
     properties: {
       /**
        * Represents the value (from 0 to 100) of the percentage progress.
@@ -69,7 +68,8 @@ Custom property | Description | Default
         computed: '_computeRatio(value)'
       },
       /**
-       * Flag for whether to animate the stripes.
+       * Flag for whether to animate the progress bar. Set to true for an
+       * indeterminate or infinite progress bar.
        */
       infinite: {
         type: Boolean,
@@ -104,7 +104,6 @@ Custom property | Description | Default
       this.setAttribute('aria-valuemin','0');
       this.setAttribute('aria-valuemax','100');
     }
-
 
   });
 </script>

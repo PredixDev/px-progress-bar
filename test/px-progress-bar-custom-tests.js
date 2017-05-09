@@ -41,10 +41,6 @@ function runCustomTests() {
       assert.equal(prog2.$$('#fill').style.transform, 'scaleX(0.8)');
       done();
     });
-    test('Check that bar is striped', function(done){
-      assert.isTrue(prog2.$$('#filleffect').classList.contains('striped'));
-      done();
-    });
   });
   suite('px_progress_bar_3 is created and initialized correctly', function() {
     var prog3 = Polymer.dom(document).querySelector('#px_progress_bar_3');
@@ -65,7 +61,7 @@ function runCustomTests() {
       done();
     });
     test('Check that bar is animated', function(done){
-      assert.isTrue(prog3.$$('#filleffect').classList.contains('animated'));
+      assert.isTrue(prog3.$$('#fill').classList.contains('infinite'));
       done();
     });
   });
