@@ -24,15 +24,18 @@
 
 $px-progress-bar-fill-color       :   var(--px-progress-bar-fill-color,black);
 $px-progress-bar-background-color :   var(--px-progress-bar-background-color, lightgray);
+$px-progress-bar-height           :   var(--px-progress-bar-height, 5px);
 
-.px-progress-bar {
-  height: var(--px-progress-bar-height, 5px);
+:host {
+  height: $px-progress-bar-height;
 }
 .background {
   background-color: $px-progress-bar-background-color;
+  height: $px-progress-bar-height;
 }
 .fill {
   background-color: $px-progress-bar-fill-color;
+  height: $px-progress-bar-height;
   transition: transform 1s cubic-bezier(.78,.13,.16,.87);
   -webkit-transform-origin: left center;
   transform-origin: left center;

@@ -23,10 +23,9 @@
     <!-- Header -->
     <px-demo-header
         module-name="px-progress-bar"
-        description="The Basic Progress Bar indicates the progress of an activity with explicit start and end times, or known duration.
-          The blue portion of the bar grows from left to right to indicate the percentage of progress. Upon completion,
-          the progress bar should automatically disappear from the screen.
-          The Striped Progress Bar indicates an ongoing activity with an indefinite end, such as loading data. The animation hints at
+        description="The basic progress bar indicates the progress of an activity with explicit start and end times, or known duration.
+          The filled portion of the bar grows from left to right to indicate the percentage of progress.
+          The infinite progress bar indicates an ongoing activity with an indefinite end, such as loading data. The animation hints at
           forward progress, but since an end time cannot be calculated, does not explicitly display the amount of progress.">
     </px-demo-header>
 
@@ -79,13 +78,15 @@
           return [
             {
               configName: "Default",
-              configReset: true
+              configHideProps: ['value'],
+              value: 20,
+              infinite: false
             },
 
             {
               configName: "Infinite",
-              "value":100,
-              "infinite":true
+              value: 100,
+              infinite: true
             }
           ]
         }
@@ -98,8 +99,8 @@
     demoProps: {
       value: {
         type: String,
-        defaultValue: '20',
-        inputType: 'number'
+        defaultValue: 20,
+        inputType: 'text'
       },
 
       infinite: {
