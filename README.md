@@ -1,6 +1,5 @@
 #px-progress-bar [![Build Status](https://travis-ci.org/PredixDev/px-progress-bar.svg?branch=master)](https://travis-ci.org/PredixDev/px-progress-bar)
 
-[![px-progress-bar demo](px-progress-bar.png?raw=true)](https://github.com/PredixDev/px-progress-bar)
 
 ## Overview
 
