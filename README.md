@@ -1,9 +1,9 @@
-#px-progress-bar [![Build Status](https://travis-ci.org/PredixDev/px-progress-bar.svg?branch=master)](https://travis-ci.org/PredixDev/px-progress-bar)
+# px-progress-bar [![Build Status](https://travis-ci.org/PredixDev/px-progress-bar.svg?branch=master)](https://travis-ci.org/PredixDev/px-progress-bar)
 
 
 ## Overview
 
-px-progress-bar is a Predix UI component providing a progress bar, which can optionally include stripes and an animation effect.
+Px-progress-bar is a Predix UI component providing a progress bar, which can optionally include stripes and an animation effect.
 
 ## Usage
 
@@ -38,7 +38,7 @@ Finally, use the component in your application:
 <br />
 <hr />
 
-## documentation
+## Documentation
 
 Read the full API and view the demo [here](https://predixdev.github.io/px-progress-bar/px-progress-bar/index.html).
 
