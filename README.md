@@ -3,7 +3,7 @@
 
 ## Overview
 
-Px-progress-bar is a Predix UI component providing a progress bar, which can optionally include stripes and an animation effect.
+`Px-progress-bar` is a Predix UI component that provides a progress bar, which can optionally include stripes and an animation effect.
 
 ## Usage
 
@@ -17,13 +17,13 @@ Node, npm and bower are necessary to install the component and dependencies. web
 
 ## Getting Started
 
-First, install the component via bower on the command line.
+First, install the component via bower on the command line:
 
 ```
 bower install Px-Progress-Bar --save
 ```
 
-Second, import the component to your application with the following tag in your head.
+Second, import the component in your application with the following tag in your head:
 
 ```
 <link rel="import" href="/bower_components/Px-Progress-Bar/Px-Progress-Bar.html"/>
