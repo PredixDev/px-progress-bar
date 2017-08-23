@@ -34,7 +34,6 @@ Custom property | Description | Default
   <template>
     <style include="px-progress-bar-styles"></style>
 
-
     <div id="background" class="background">
       <div id="fill" class="fill">
       </div>
@@ -73,6 +72,7 @@ Custom property | Description | Default
       infinite: {
         type: Boolean,
         value: false,
+        reflectToAttribute: true,
         observer: 'ready'
       }
     },
@@ -90,13 +90,6 @@ Custom property | Description | Default
     */
     _computeRatio: function(value) {
       return value < 0 ? 0 : (value > 100 ? 1 : value / 100);
-    },
-    /**
-    * Ready function, to toggle the proper classes based on config properties.
-    * @method ready
-    */
-    ready: function() {
-      this.toggleClass('infinite',this.infinite,this.$.fill);
     },
     attached: function() {
       this.setAttribute('role','progressbar');
