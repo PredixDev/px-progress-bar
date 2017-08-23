@@ -1,3 +1,7 @@
+v1.0.3
+==================
+* fix unit tests
+
 v1.0.2
 ==================
 * replace toggleClass

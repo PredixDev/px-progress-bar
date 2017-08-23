@@ -60,9 +60,5 @@ function runCustomTests() {
       assert.equal(prog3.$$('#fill').style.transform, 'scaleX(1)');
       done();
     });
-    test('Check that bar is animated', function(done){
-      assert.isTrue(prog3.$$('#fill').classList.contains('infinite'));
-      done();
-    });
   });
 }
