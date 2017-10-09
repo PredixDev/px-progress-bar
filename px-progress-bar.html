@@ -4,6 +4,7 @@
     'grunt depserve' (or similar server setup) to enable correct finding of bower dependencies for local runs.
 -->
 <link rel="import" href="../polymer/polymer.html"/>
+<link rel="import" href="css/px-progress-bar-styles.html"/>
 
 
 <!--
@@ -25,11 +26,7 @@ Custom property | Description | Default
 @blurb Element providing a progress bar.
 @homepage index.html
 @demo demo.html
-
 -->
-
-<link rel="import" href="css/px-progress-bar-styles.html">
-
 <dom-module id="px-progress-bar">
   <template>
     <style include="px-progress-bar-styles"></style>
@@ -52,18 +49,7 @@ Custom property | Description | Default
        */
       value: {
         type: Number,
-        value: 0,
-        notify: true,
-        observer: '_updateProgress'
-      },
-      /**
-       * Internal property for calculating the ratio (from 0 to 1) for sizing
-       * elements within the component - also clips negative values and values
-       * greater than 100 in its compute function.
-       */
-      _ratio: {
-        type: Number,
-        computed: '_computeRatio(value)'
+        value: 0
       },
       /**
        * Flag for whether to animate the progress bar. Set to true for an
@@ -74,28 +60,61 @@ Custom property | Description | Default
         value: false,
         reflectToAttribute: true,
         observer: 'ready'
+      },
+      /**
+       * The minimum value for the progress bar, used to calculate the amount
+       * that is filled in.
+       */
+      min: {
+        type: Number,
+        value: 0
+      },
+      /**
+       * The maximum value for the progress bar, used to calculate the amount
+       * that is filled in.
+       */
+      max: {
+        type: Number,
+        value: 100
+      },
+      /**
+       * Internal property for calculating the ratio (from 0 to 1) for sizing
+       * elements within the component - also clips negative values and values
+       * greater than 100 in its compute function.
+       */
+      _ratio: {
+        type: Number,
+        computed: '_computeRatio(value, min, max)',
+        observer: '_updateProgress'
       }
     },
-     /**
-     * Function to transform the filled portion of the progress bar.
-     */
-    _updateProgress: function() {
-      var transform = 'scaleX(' + this._ratio + ')';
-      this.$.fill.style.transform = this.$.fill.style.webkitTransform = transform;
-      this.setAttribute('aria-valuenow',this.value);
+    attached: function() {
+      this.setAttribute('role', 'progressbar');
+      this.setAttribute('aria-valuemin', '0');
+      this.setAttribute('aria-valuemax', '100');
     },
     /**
-    * Function to compute the ratio based on the value.
-    * Also clips values that are out of range (0 to 100).
-    */
-    _computeRatio: function(value) {
-      return value < 0 ? 0 : (value > 100 ? 1 : value / 100);
+     * Function to transform the filled portion of the progress bar.
+     */
+    _updateProgress: function(newRatio, oldRatio) {
+      if (newRatio !== oldRatio) {
+        var transform = 'scaleX(' + newRatio + ')';
+        this.$.fill.style.transform = this.$.fill.style.webkitTransform = transform;
+        this.setAttribute('aria-valuenow', this.value);
+      }
     },
-    attached: function() {
-      this.setAttribute('role','progressbar');
-      this.setAttribute('aria-valuemin','0');
-      this.setAttribute('aria-valuemax','100');
+    /**
+     * Function to compute the ratio based on the value.
+     * Also clips values that are out of range (0 to 100).
+     */
+    _computeRatio: function(value, min, max) {
+      if (isNaN(value) || isNaN(min) || isNaN(max) || value < min) {
+        return 0;
+      }
+      if (value > max) {
+        return 1;
+      }
+      return (value-min) / (max-min);
     }
-
   });
 </script>

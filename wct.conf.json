@@ -37,6 +37,6 @@
     }
   },
   "suites": [
-    "test/px-progress-bar-test-fixture.html"
+    "test/px-progress-bar-fixture.html"
   ]
 }

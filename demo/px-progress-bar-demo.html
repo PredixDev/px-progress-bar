@@ -41,6 +41,8 @@
       <px-demo-component style="width:100%;">
         <px-progress-bar
           value="{{props.value.value}}"
+          min="{{props.min.value}}"
+          max="{{props.max.value}}"
           infinite="{{props.infinite.value}}">
         </px-progress-bar>
       </px-demo-component>
@@ -77,15 +79,18 @@
         value: function(){
           return [
             {
-              configName: "Default",
+              configName: 'Default',
               value: 20,
+              min: 0,
+              max: 100,
               infinite: false
             },
-
             {
-              configName: "Infinite",
-              configHideProps: ['value'],
+              configName: 'Infinite',
+              configHideProps: ['value', 'min', 'max'],
               value: 100,
+              min: 0,
+              max: 100,
               infinite: true
             }
           ]
@@ -100,9 +105,18 @@
       value: {
         type: String,
         defaultValue: 20,
-        inputType: 'text'
+        inputType: 'number'
       },
-
+      min: {
+        type: Number,
+        defaultValue: 0,
+        inputType: 'number'
+      },
+      max: {
+        type: Number,
+        defaultValue: 100,
+        inputType: 'number'
+      },
       infinite: {
         type: Boolean,
         defaultValue: false,
