@@ -1,3 +1,11 @@
+v1.1.0
+==================
+* Adds min and max properties to specify a range for the value, making its API work just like px-gauge (with a few less configurations available)
+* Fix comment so the CSS variables will show up on Predix UI site
+* Add example page to show everything working together
+* Update tests to cover calculating ratio in a custom range
+* Switch all tests to use fixtures
+
 v1.0.3
 ==================
 * fix unit tests
