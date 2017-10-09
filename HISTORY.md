@@ -1,3 +1,9 @@
+POLYMER2.0-PRERELEASE (VERSION PENDING)
+==================
+* Uses native `this.shadowRoot` query API to get the fill HTMLElement instead
+  of Polymer.dom wrapper. This seems to be required in Shadow DOM v1. Without
+  this change the inline fill style is never reflected in the DOM.
+
 v1.1.0
 ==================
 * Adds min and max properties to specify a range for the value, making its API work just like px-gauge (with a few less configurations available)

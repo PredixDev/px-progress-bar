@@ -10,32 +10,36 @@
   <link rel="import" href="../polymer/polymer.html"/>
   <!-- Load theme -->
   <link rel="import" href="../px-theme/px-theme-styles.html"/>
-  <style is="custom-style" include="px-theme-styles"></style>
+  <custom-style>
+    <style is="custom-style" include="px-theme-styles"></style>
+  </custom-style>
   <!-- Load components -->
   <link rel="import" href="../px-progress-bar.html"/>
   <!-- Custom styles for this example -->
-  <style is="custom-style">
-    body {
-      margin: 2rem;
-    }
-    .container {
-      display: flex;
-      align-items: center;
-    }
-    .custom-progress-bar {
-      flex: 1 1 auto;
-      --px-progress-bar-height: 50px;
-      --px-progress-bar-fill-color: salmon; /* mmm, salmon */
-      --px-progress-bar-background-color: lightgray;
-    }
-    .label {
-      font-size: 2.5rem;
-      padding-left: 1rem;
-    }
-    .button {
-      margin-left: 1rem;
-    }
-  </style>
+  <custom-style>
+    <style is="custom-style">
+      body {
+        margin: 2rem;
+      }
+      .container {
+        display: flex;
+        align-items: center;
+      }
+      .custom-progress-bar {
+        flex: 1 1 auto;
+        --px-progress-bar-height: 50px;
+        --px-progress-bar-fill-color: salmon; /* mmm, salmon */
+        --px-progress-bar-background-color: lightgray;
+      }
+      .label {
+        font-size: 2.5rem;
+        padding-left: 1rem;
+      }
+      .button {
+        margin-left: 1rem;
+      }
+    </style>
+  </custom-style>
 </head>
 <body>
   <div class="container">

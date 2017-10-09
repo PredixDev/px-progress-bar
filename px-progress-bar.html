@@ -98,8 +98,8 @@ Custom property | Description | Default
      */
     _updateProgress: function(newRatio, oldRatio) {
       if (newRatio !== oldRatio) {
-        var transform = 'scaleX(' + newRatio + ')';
-        this.$.fill.style.transform = this.$.fill.style.webkitTransform = transform;
+        var fillEl = this.shadowRoot.querySelector('#fill');
+        fillEl.setAttribute('style', 'transform:scaleX('+newRatio+')');
         this.setAttribute('aria-valuenow', this.value);
       }
     },
