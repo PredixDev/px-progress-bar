@@ -67,7 +67,8 @@ Custom property | Description | Default
        */
       min: {
         type: Number,
-        value: 0
+        value: 0,
+        observer: '_setMinAriaLabel'
       },
       /**
        * The maximum value for the progress bar, used to calculate the amount
@@ -75,7 +76,8 @@ Custom property | Description | Default
        */
       max: {
         type: Number,
-        value: 100
+        value: 100,
+        observer: '_setMaxAriaLabel'
       },
       /**
        * Internal property for calculating the ratio (from 0 to 1) for sizing
@@ -90,8 +92,6 @@ Custom property | Description | Default
     },
     attached: function() {
       this.setAttribute('role', 'progressbar');
-      this.setAttribute('aria-valuemin', '0');
-      this.setAttribute('aria-valuemax', '100');
     },
     /**
      * Function to transform the filled portion of the progress bar.
@@ -115,6 +115,16 @@ Custom property | Description | Default
         return 1;
       }
       return (value-min) / (max-min);
-    }
+    },
+    _setMinAriaLabel: function(newMin, oldMin) {
+      if (newMin !== oldMin) {
+        this.setAttribute('aria-valuemin', newMin);
+      }
+    },
+    _setMaxAriaLabel: function(newMax, oldMax) {
+      if (newMax !== oldMax) {
+        this.setAttribute('aria-valuemax', newMax);
+      }
+    },
   });
 </script>
