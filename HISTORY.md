@@ -1,3 +1,7 @@
+v1.1.1
+==================
+* add device flags
+
 v1.1.0
 ==================
 * Adds min and max properties to specify a range for the value, making its API work just like px-gauge (with a few less configurations available)
