@@ -1,19 +1,17 @@
-<!--
-    Relative paths assume component is being run from inside an app or another component, where dependencies are flat
-    siblings. When this component is run from its own repo (e.g. tests, examples), we assume the server is started with
-    'grunt depserve' (or similar server setup) to enable correct finding of bower dependencies for local runs.
--->
 <link rel="import" href="../polymer/polymer.html"/>
 <link rel="import" href="css/px-progress-bar-styles.html"/>
 
-
 <!--
+The basic progress bar indicates the progress of an activity with explicit start and end times, or known duration. The filled portion of the bar grows from left to right to indicate the percentage of progress.
+
+The infinite progress bar indicates an ongoing activity with an indefinite end, such as loading data. The animation hints at forward progress, but since an end time cannot be calculated, does not explicitly display the amount of progress.
 
 ### Usage
 
     <px-progress-bar value="50"></px-progress-bar>
 
 ### Styling
+
 The following custom properties and mixins are also available for styling:
 
 Custom property | Description | Default
@@ -40,9 +38,7 @@ Custom property | Description | Default
 
 <script>
   Polymer({
-
     is: 'px-progress-bar',
-
     properties: {
       /**
        * Represents the value (from 0 to 100) of the percentage progress.
@@ -97,8 +93,8 @@ Custom property | Description | Default
      * Function to transform the filled portion of the progress bar.
      */
     _updateProgress: function(newRatio, oldRatio) {
-      if (newRatio !== oldRatio) {
-        var fillEl = this.shadowRoot.querySelector('#fill');
+      if (typeof newRatio !== 'undefined' && newRatio !== oldRatio) {
+        var fillEl = Polymer.dom(this.root).querySelector('#fill');;
         fillEl.setAttribute('style', 'transform:scaleX('+newRatio+')');
         this.setAttribute('aria-valuenow', this.value);
       }
@@ -108,6 +104,8 @@ Custom property | Description | Default
      * Also clips values that are out of range (0 to 100).
      */
     _computeRatio: function(value, min, max) {
+      if (typeof value === 'undefined' || typeof min === 'undefined' || typeof max === 'undefined') return;
+
       if (isNaN(value) || isNaN(min) || isNaN(max) || value < min) {
         return 0;
       }
@@ -117,12 +115,12 @@ Custom property | Description | Default
       return (value-min) / (max-min);
     },
     _setMinAriaLabel: function(newMin, oldMin) {
-      if (newMin !== oldMin) {
+      if (typeof newMin !== 'undefined' && newMin !== oldMin) {
         this.setAttribute('aria-valuemin', newMin);
       }
     },
     _setMaxAriaLabel: function(newMax, oldMax) {
-      if (newMax !== oldMax) {
+      if (typeof newMin !== 'undefined' && newMax !== oldMax) {
         this.setAttribute('aria-valuemax', newMax);
       }
     },
