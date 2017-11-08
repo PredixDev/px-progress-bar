@@ -1,8 +1,6 @@
-POLYMER2.0-PRERELEASE (VERSION PENDING)
+v1.1.1
 ==================
-* Uses native `this.shadowRoot` query API to get the fill HTMLElement instead
-  of Polymer.dom wrapper. This seems to be required in Shadow DOM v1. Without
-  this change the inline fill style is never reflected in the DOM.
+* add device flags
 
 v1.1.0
 ==================
