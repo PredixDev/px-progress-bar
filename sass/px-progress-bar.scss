@@ -19,10 +19,8 @@
 @import "px-flexbox-design/_base.flexbox.scss";
 @import "px-viewport-design/_base.viewport.scss";
 
-
 // Component
-
-$px-progress-bar-fill-color       :   var(--px-progress-bar-fill-color,black);
+$px-progress-bar-fill-color       :   var(--px-progress-bar-fill-color, black);
 $px-progress-bar-background-color :   var(--px-progress-bar-background-color, lightgray);
 $px-progress-bar-height           :   var(--px-progress-bar-height, 5px);
 
@@ -45,10 +43,10 @@ $px-progress-bar-height           :   var(--px-progress-bar-height, 5px);
 }
 :host {
   height: $px-progress-bar-height;
-  &[infinite] .fill {
-    position: relative;
-    animation: progress 2s cubic-bezier(.78,.13,.16,.87) infinite;
-  }
+}
+:host([infinite]) .fill {
+  position: relative;
+  animation: progress 2s cubic-bezier(.78,.13,.16,.87) infinite;
 }
 .background {
   background-color: $px-progress-bar-background-color;
