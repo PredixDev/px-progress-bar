@@ -1,6 +1,6 @@
-
+v1.2.1
 ==================
-* Efficiency upgrade for infinite version
+* Performance upgrade for infinite version
 
 v1.2.0
 ==================
