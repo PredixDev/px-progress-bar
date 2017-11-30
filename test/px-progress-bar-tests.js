@@ -18,7 +18,11 @@ describe('progress bar with infinite value', () => {
   it('fills the entire progress bar during the animation', () => {
     const progressBar = fixture('ValueInfinite');
     const fill = Polymer.dom(progressBar.root).querySelector('#fill');
-    expect(fill.style.transform).to.equal('scaleX(1)');
+    const state = window.getComputedStyle(fill).getPropertyValue("animation-play-state");
+    const name = window.getComputedStyle(fill).getPropertyValue("animation-name").split('-')[0];
+
+    expect(name).to.equal('progress');
+    expect(state).to.equal('running');
   });
 });
 

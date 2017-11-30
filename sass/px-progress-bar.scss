@@ -26,19 +26,22 @@ $px-progress-bar-height           :   var(--px-progress-bar-height, 5px);
 
 @keyframes progress {
   0% {
-    left: 0%;
-    right: 100%;
-    transform: scaleX(0);
+    transform: translateX(-100%);
   }
-  50% {
-    left: 0%;
-    right: 0%;
-    transform: scaleX(1);
+  5% {
+    transform: translateX(-100%);
+  }
+  45% {
+    transform: translateX(0);
+  }
+  55% {
+    transform: translateX(0);
+  }
+  95% {
+    transform: translateX(100%);
   }
   100% {
-    left: 100%;
-    right: 0%;
-    transform: scaleX(0);
+    transform: translateX(100%);
   }
 }
 :host {
@@ -46,10 +49,14 @@ $px-progress-bar-height           :   var(--px-progress-bar-height, 5px);
 }
 :host([infinite]) .fill {
   position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
   animation: progress 2s cubic-bezier(.78,.13,.16,.87) infinite;
 }
 .background {
   background-color: $px-progress-bar-background-color;
+  overflow-x: hidden;
   height: $px-progress-bar-height;
 }
 .fill {
