@@ -1,3 +1,7 @@
+v1.2.2
+==================
+* Fix demo for IE
+
 v1.2.1
 ==================
 * Performance upgrade for infinite version
